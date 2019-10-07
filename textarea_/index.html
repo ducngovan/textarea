@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center>
+<div class="content">
+    <div>
+        <h1>Type anthing slowly</h1>
+    </div>
+    <div>
+        <textarea id="write" onkeypress="return getKey()" style="width: 300px; height: 300px;"></textarea>
+    </div>
+<script>
+    var array, i, len, text;
+    array = ['C','H','O','N',' ','M','O','T',' ','C','O','N',' ','D','U','O','N','G',' ','V','A',' ','D','I',' ','D','E','N',' ','C','U','N','G'];
+    i = 0;
+    len = array.length;
+    text ='';
+    function getKey() {
+        if (i==len-1) {
+            i = 0;
+            text = '';
+        } else {
+            text += array[i];
+            i++;
+        }
+        document.getElementById('write').value = text;
+        return false;
+
+
+    }
+</script>
+</div>
+</center>
+</body>
+</html>
